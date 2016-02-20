@@ -18,3 +18,11 @@ for mercenary in mercs_json:
         print('{} already exists in {} collection!'.format(mercenary['name'], db.mercenaries.name))
     else:
         print('Inserted {} into {} collection'.format(mercenary['name'], db.mercenaries.name))
+
+items_json = arctic_cards.Items.ALL_ITEMS
+for item in items_json:
+    result = insert_unique_document(db.items, item)
+    if result is None:
+        print('{} already exists in {} collection!'.format(item['name'], db.items.name))
+    else:
+        print('Inserted {} into {} collection'.format(item['name'], db.item.name))
