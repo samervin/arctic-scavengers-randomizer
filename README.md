@@ -1,6 +1,6 @@
 # arctic-scavengers-randomizer
 
-A resource similar to [these sort of Dominion websites(http://www.hiwiller.com/dominion/), but for the board game Arctic Scavengers.
+A resource similar to [these sort of Dominion websites](http://www.hiwiller.com/dominion/), but for the board game Arctic Scavengers.
 
 Written in Python using PyCharm and virtualenv and MongoDB.
 
