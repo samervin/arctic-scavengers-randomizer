@@ -49,5 +49,15 @@ class Gangs:
             COMMENT: 'From the manual: '
                      'Most buildings is determined by adding the total number of completed and enabled buildings. '
                      'Ties are broken by adding up the total number of engineers.'
+        },
+        {
+            NAME: 'Humanitarians',
+            SET: RECON_EXP,
+            TRIBE_MEMBERS: 5,
+            VICTORY_CONDITION: 'refugees',
+            TEXT: 'At game end, this gang joins whichever tribe has accumulated the most Refugees.',
+            COMMENT: 'From the manual: '
+                     'Awarded based upon number of cards with the "refugee" keyword in the title. '
+                     'There is no tie-breaker. In the event of a tie, this gang is not awarded.'
         }
     ]

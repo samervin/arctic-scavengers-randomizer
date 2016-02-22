@@ -76,5 +76,18 @@ class Leaders:
             SET: HQ_EXP,
             USES_REFUGEES: True,
             TEXT: 'All of your Refugees and Tribe Families have a hunt of 1.'
+        },
+        {
+            NAME: 'The Swindler',
+            SET: RECON_EXP,
+            USES_REFUGEES: True,
+            TEXT: 'Once per turn, you may discard 1 Refugee to persuade a mercenary into joining your tribe for 1 less food '
+                  'or discard two Refugees to reduce the price by 1 med.'
+        },
+        {
+            NAME: 'The Yardmaster',
+            SET: RECON_EXP,
+            TEXT: 'Once per turn, you may peek at the top 2 cards of the Junkyard. '
+                  'Return both of them to the top or bottom of the Junkyard.'
         }
     ]
