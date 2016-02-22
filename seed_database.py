@@ -8,21 +8,20 @@ def insert_unique_document(collection, document):
     else:
         return None
 
+
+def insert_array(collection, documents):
+    for document in documents:
+        result = insert_unique_document(collection, document)
+        if result is None:
+            print('{} already exists in {} collection!'.format(document['name'], collection.name))
+        else:
+            print('Inserted {} into {} collection'.format(document['name'], collection.name))
+
 client = MongoClient()
 db = client.arcticscavengers
 
-mercs_json = arctic_cards.Mercenaries.ALL_MERCENARIES
-for mercenary in mercs_json:
-    result = insert_unique_document(db.mercenaries, mercenary)
-    if result is None:
-        print('{} already exists in {} collection!'.format(mercenary['name'], db.mercenaries.name))
-    else:
-        print('Inserted {} into {} collection'.format(mercenary['name'], db.mercenaries.name))
-
-items_json = arctic_cards.Items.ALL_ITEMS
-for item in items_json:
-    result = insert_unique_document(db.items, item)
-    if result is None:
-        print('{} already exists in {} collection!'.format(item['name'], db.items.name))
-    else:
-        print('Inserted {} into {} collection'.format(item['name'], db.item.name))
+insert_array(db.mercenaries, arctic_cards.Mercenaries.ALL_MERCENARIES)
+insert_array(db.items, arctic_cards.Items.ALL_ITEMS)
+insert_array(db.gangs, arctic_cards.Gangs.ALL_GANGS)
+insert_array(db.buildings, arctic_cards.Buildings.ALL_BUILDINGS)
+insert_array(db.leaders, arctic_cards.Leaders.ALL_LEADERS)
